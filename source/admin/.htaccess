@@ -1,0 +1,6 @@
+AuthUserFile /home/content/27/11369627/html/honda_ex/admin/.htpasswd
+AuthGroupFile /dev/null
+AuthName "EnterPassword"
+AuthType Basic
+
+require valid-user

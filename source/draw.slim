@@ -1,0 +1,76 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    title HONDA
+    / meta content="width=(device-width,)initial-scale=1.0" name="viewport"
+    meta content="" name="description"
+    meta content="" name="author"
+    == stylesheet_link_tag "bootstrap", "bootstrap-responsive", "draw"
+    css:
+      
+    /![if lt IE 9]
+      | <script src="../assets/js/html5shiv.js"></script>
+  body
+    .container
+      .hero-unit
+        .masthead
+          h3.logo HONDA
+          .navbar
+            .navbar-inner
+              .container
+                ul.nav
+                  li.active
+                    a href="#" 抽獎
+                  li
+                    a href="https://apps.facebook.com/honda_promotion_dev/" target="_blank" APP頁面
+                  li
+                    a href="http://www.honda-taiwan.com.tw/" target="_blank" Honda官網
+          /! /.navbar
+        /! Jumbotron
+        .jumbotron
+          h1
+            | New Honda Accord
+            br
+            | 分享抽獎品！
+          p.lead 只要將此APP分享給好友們，就有機會得到專屬Polo衫、PowerBank行動電源喔！
+          img#shared-loading src="./images/loading_spin.gif" width="32px"
+          p#shared-msg.hide 您已經成功參加抽獎囉！敬請期待開獎結果！
+          p#login-msg.hide 請先登入本APP～
+          form#info-form.form-horizontal.hide action="https://kevinshu.com/honda/api/update_user.php" method="post"
+            p 請輸入您的基本資料，確認正確無誤我們才能聯絡到你喔～
+            input type="hidden" name="uid"
+            div class="control-group"
+              label class="control-label" 姓名:
+              div class="controls"
+                input name="name"
+            div class="control-group"
+              label class="control-label" 聯絡電話:
+              div class="controls"
+                input name="phone"
+            div class="control-group"
+              label class="control-label" 通訊地址:
+              div class="controls"
+                input name="address"
+            div class="control-group"
+              div class="controls"
+                input.btn.btn-primary type="submit" value="送出"
+          a#share-btn.btn.btn-large.btn-success.hide onclick="shareAndRedirect()" 馬上分享！
+        / hr
+        /   /! Example row of columns
+        /   .row-fluid
+        /     .span4
+        /       h2 對粉絲團按讚
+        /       iframe allowTransparency="true" frameborder="0" scrolling="no" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fmilestones.cc&amp;width=292&amp;height=258&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;show_border=true&amp;header=false&amp;appId=344484452312404" style="border:none; overflow:hidden; width:292px; height:258px;"
+        /     .span4
+        /       h2 分享APP
+        /       p 快給我分享！
+        /       p
+        /         a.btn href="#" onclick="shareAndRedirect()" share
+        /     .span4
+        /       h2 抽獎囉！
+        /       p 感謝你，掰
+        / hr
+        /   .footer
+        /     p &copy; Company 2013
+    == javascript_include_tag  "draw"

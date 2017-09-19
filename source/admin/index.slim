@@ -1,0 +1,63 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container-fluid
+      button.btn.btn-navbar data-target=".nav-collapse" data-toggle="collapse" type="button"
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand href="#"
+      .nav-collapse.collapse
+        / p.navbar-text.pull-right
+        /   | Logged in as
+        /   a.navbar-link href="#"
+        / ul.nav
+        /   li.active
+        /     a href="#"
+        /   li
+        /     a href="#about"
+        /   li
+        /     a href="#contact"
+      /! /.nav-collapse
+.container-fluid
+  .row-fluid
+    .span12
+      .hero-unit
+        h1 Honda New Accord 行銷活動抽獎後台
+        p 請按下按鈕隨機抽獎
+        p
+          a#js-draw.btn.btn-primary.btn-large href="#" 抽獎
+        #lucky-star.hide
+          | 幸運得主是：
+          table.table.table-striped
+            thead
+              tr
+                th 姓名
+                th 電話
+                / th email
+                th 住址
+            tbody
+              tr#lucky-star-info
+                td data-tp="name"
+                td data-tp="phone"
+                / td data-tp="email"
+                td data-tp="address"
+      .row-fluid
+        .span12
+          h2 名單
+          table.table.table-striped
+            thead
+              tr
+                th 姓名
+                th 電話
+                / th email
+                th 住址
+            tbody
+              tr#member-info
+                td data-tp="name"
+                td data-tp="phone"
+                / td data-tp="email"
+                td data-tp="address"
+hr
+  footer
+    p &copy; Company 2013
+  /! /.fluid-container

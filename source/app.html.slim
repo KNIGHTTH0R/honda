@@ -1,0 +1,181 @@
+#step1
+  section.canvas
+    / span.btn-steel
+    /   | 上傳個人背景
+    /   input#image-uploader type="file"
+    .canvas-inner
+      #preview
+        .car
+          img.inner src="" width="13356px" height="193px"
+        .rotate-panel
+        / table
+        /   tr
+        /     td
+        /       i.icon-chevron-left.cr
+        /     td
+        /       i.icon-hand-up.finger
+        /     td
+        /       i.icon-chevron-right.ccr
+
+  .gap
+
+  section.dashboard
+    div.column
+      section.background
+        header
+          h3 選擇背景圖片
+        img#bg-thumbnail.switch src="./images/bg/0.jpg"
+        .pre data-pre="9"
+          i.icon-chevron-left
+        .next data-next="1"
+          i.icon-chevron-right
+      a.btn.upload-custom-image
+        | 上傳個人背景
+        input#image-uploader type="file"
+
+    div.column
+      section.color
+        header
+          h3 選擇顏色
+        .wrapper
+          img.color-option.black src="./images/color/black.png" data-color="0"
+          img.color-option.titanium src="./images/color/titanium.png" data-color="1"
+          img.color-option.white src="./images/color/white.png" data-color="2"
+          img.color-option.gold src="./images/color/gold.png" data-color="3"
+          .clear-float
+      section.wheel
+        header
+          h3 選擇車款型號
+        .wrapper
+          table
+            tr
+              td
+                img.wheel-option src="./images/wheel_VTi.png" data-wheel="0"
+                br
+                | 2.4 VTI Deluxe
+                br
+                | 2.4 VTI Luxury
+              td
+                img.wheel-option src="./images/wheel_VTiS.png" data-wheel="1"
+                br
+                | 2.4 VTI-S Exclusive
+          .clear-float
+
+    div.column
+      section.options
+        header
+          h3 其他選項
+        .wrapper
+          #zoom.zoom
+            span.zoom-in
+              i.icon-zoom-in
+            span.zoom-out
+              i.icon-zoom-out
+            / .clear-float
+          #move.move
+            table
+              tr
+                td
+                td
+                  a.up href="javascript:void(0)" data-direction="up"
+                    i.icon-caret-up
+                td
+              tr
+                td
+                  a.left href="javascript:void(0)" data-direction="left"
+                    i.icon-caret-left
+                td
+                td
+                  a.right href="javascript:void(0)" data-direction="right"
+                    i.icon-caret-right
+              tr
+                td
+                td
+                  a.down href="javascript:void(0)" data-direction="down"
+                    i.icon-caret-down
+                td
+          .clear-float
+
+      .bottom-right-btns
+        a#next-step.btn.btn-primary href="#" Finish
+  .clear-float
+
+#step2
+  .view
+    .internal
+    .property
+      a#guidance.btn.btn-transparent.image-popup-no-margins href="./images/properties/guidance.jpg" Guidance 節能引導功能
+      a#lane-watch.btn.btn-transparent.image-popup-no-margins href="./images/properties/lane-watch.jpg" Lane Watch 盲點監測
+      a#backward-camera.btn.btn-transparent.image-popup-no-margins href="./images/properties/backward-camera.jpg" 3模式倒車攝影機
+      a#show-interior.btn.btn-transparent href="#" 360度內裝巡禮
+  .detail
+    a.banner href="https://kevinshu.com/honda/draw.html" target="_blank"
+      img src="./images/banner.jpg" width="600px" height="94px"
+    .export
+      .loading
+        img.spin src="./images/loading_spin.gif"
+        br
+        | 處理中...
+      a#export.btn-steel href="#" 輸出至Facebook
+      a#export-done.btn-steel.hide href="https://kevinshu.com/honda/draw.html" 進行抽獎
+      br
+      a#download.btn-steel href="#" download="output.jpg"  輸出圖片
+      a#download-done.btn-steel.hide href="https://kevinshu.com/honda/draw.html" 進行抽獎
+      / onclick="this.href=document.getElementById('cover-photo').toDataURL('image/jpg');"
+
+
+#bg-gallery.bg-gallery
+
+#car-gallery
+
+canvas#cover-photo.cover-photo width="851px" height="315px"
+
+#select-area-popup class="white-popup mfp-hide"
+  img.select
+  .select-preview
+  a#confirm-upload.btn.btn-primary.pull-right href="#" 確認
+  a#cancel-upload.btn.pull-right href="#" 取消
+  .clear-float
+
+#interior-popup class="black-popup mfp-hide"
+  embed width="400px" height="400px" src="./flash/interior.swf" wmode="transparent" type="application/x-shockwave-flash"
+
+#draw-info.draw-info.white-popup.mfp-hide
+  h4 
+    | 名稱：【體驗全方位Accord分享抽專屬禮品！】
+  h4
+    | 活動時間：2013/8/2-2013/8/31
+  h4
+    | 獎品：Accord行動電源 x10、Honda Polo衫 X10
+  h4
+    | 活動辦法：
+  small
+    | 即日起只要是Honda Taiwan的粉絲，或已經是Honda的老朋友，都歡迎大家體驗New Honda Accord APP參加New Honda Accord分享抽獎品的活動，就有機會獲得Honda Taiwan準備的Accord專屬行動電源或Honda Polo衫歐~ 
+  
+  h4
+    | 活動詳述：
+  small
+    | Honda Taiwan邀請您體驗全方位Accord，製作屬於您與New Honda Accord的特色圖片
+    br
+    | Honda Taiwan為慶祝New Honda Accord上市，邀請大家一起使用New Honda Accord APP製作一張獨一無二的Cover Photo並分享APP給好友們，Honda Taiwan粉絲的您就有機會獲得Honda Taiwan Accord體驗分享禮喔！
+    br
+    b STEP 1：自即日起至2013/8/31(六)24:00止，使用New Honda Accord APP製作一張屬於你與New Honda Accord的特色圖片! 
+    br
+    b STEP 2：然後分享New Honda Accord APP到自己的塗鴉牆上，即有機會抽中Accord專屬行動電源以及Honda Polo衫喔!!!
+  
+  h4
+    | 注意事項
+  small
+    | 1. 本活動將於2013年9月5日前由系統隨機抽出得獎的幸運粉絲。
+    br
+    | 2. 若得獎者不符資格，Honda Taiwan 有權以遞補方式進行變更。
+    br
+    | 3. 得獎者須保證所有填寫或提出之資料均為真實且正確，並未冒用或盜用。如有不實或不正確之情事，將取消得獎資格。
+    br
+    | 4. 本活動事項載明於活動網頁中，參加本活動之同時，即同意接受本活動注意事項之規範。
+    br
+    | 5. 如有任何因電腦、網路、電話、技術或不可歸責於主辦單位之事由，而有延遲、錯誤、等情況，主辦單位不負任何法律責任，得獎者亦不得因此異議。
+    br
+    | 6. Honda Taiwan 保留資格審核及活動異動之權利。
+    br
+    | 7. Honda Taiwan 內部員工不具抽獎資格。

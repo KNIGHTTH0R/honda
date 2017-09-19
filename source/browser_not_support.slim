@@ -1,0 +1,40 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    title HONDA
+    / meta content="width=(device-width,)initial-scale=1.0" name="viewport"
+    meta content="" name="description"
+    meta content="" name="author"
+    == stylesheet_link_tag "bootstrap", "bootstrap-responsive", "draw"
+    css:
+      
+    /![if lt IE 9]
+      | <script src="../assets/js/html5shiv.js"></script>
+  body
+    .container
+      .hero-unit
+        .masthead
+          h3.logo HONDA
+          .navbar
+            .navbar-inner
+              .container
+                ul.nav
+                  li.active
+                    a href="#" 抽獎
+                  li
+                    a href="https://apps.facebook.com/honda_promotion_dev/" APP頁面
+                  li
+                    a href="http://www.honda-taiwan.com.tw/" HONDA官網
+          /! /.navbar
+        /! Jumbotron
+        .jumbotron
+          h1
+            | 對不起，
+            br
+            | 我們不支援您的瀏覽器
+          p.lead 請改用以下瀏覽器：
+          a href="http://www.google.com/intl/zh-TW/chrome/" target="_blank"
+            img src="./images/ff_icon.png" width="120px"
+          a href="http://moztw.org/firefox/" target="_blank"
+            img src="./images/chrome_icon.jpg" width="120px"

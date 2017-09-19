@@ -1,0 +1,562 @@
+@import "compass/css3"
+
+body
+  width: 760px
+  height: 640px
+  font-family: "apple ligothic", "微軟正黑體", "Microsoft JhengHei", arial
+
+a
+  text-decoration: none
+
+.column
+  @include box-sizing(border-box)
+  padding: 10px
+  float: left
+  width: 33%
+
+.navbar
+  width: 760px
+  height: 60px
+  font-family: 'Arial'
+  // font-family: 'Merriweather Sans', sans-serif
+  font-weight: 700
+  // @include box-shadow(0 4px 5px 1px black)
+  header
+    padding: 10px
+  h1
+    margin: 0
+    font-size: 1.5em
+  ul
+    margin-top: 10px
+    padding: 0px
+
+.main-container
+  position: relative
+  width: 760px
+  height: 580px
+  overflow: hidden
+
+#welcome
+  width: 760px
+  height: 640px
+  position: absolute
+  top: 0px
+  bottom: 0px
+  background: black
+  z-index: 997
+  #enter
+    position: absolute
+    top: 256px
+    left: 336px
+    height: 120px
+    width: 120px
+    cursor: pointer
+    z-index: 1001
+
+        
+  .engine-btn-around
+    background: url(../images/engine_around.png)
+    position: absolute
+    top: 0px
+    bottom: 0px
+    z-index: 999
+    width: 760px
+    height: 640px
+  .engine-btn
+    position: absolute
+    top: 256px
+    left: 336px
+    z-index: 998
+    @include transition(all 0.4s)
+  .engine-btn-hover
+    top: 260px
+    left: 340px
+  .engine-btn-active
+    top: 264px
+    left: 344px
+
+#car-light
+  @extend #welcome
+  z-index: 995
+  opacity: 0
+  background: url("../images/car_light.jpg") center no-repeat
+
+.dashboard
+  @include box-sizing(border-box)
+  // display: inline-block
+  // float: left
+  position: absolute
+  top: (760*315/851)+12px
+  left: 0px
+  width: 760px
+  height: 291px
+  padding-top: 20px
+  background: url("../images/black_leather.jpg") center
+  background-size: 100% auto
+
+  section
+    @include border-radius
+    @include box-shadow(0 0 5px 1px #000 inset)
+    border: 5px #666 solid
+    position: relative
+    margin-bottom: 10px
+    background-image: url(../images/steel.jpg)
+    text-align: center
+    header
+      padding: 5px
+      // background: grey
+      // color: white
+      // position: absolute
+      left: -5px
+      top: 0px
+      // width: 200px
+      // @include box-shadow(0 0 5px 1px black)
+      h3
+        font-size: medium
+        margin: 0
+
+
+    .wrapper
+      padding: 5px 8px
+
+  .background
+    height: 146px
+    img
+      width: 100%
+      height: 120px
+    .pre, .next
+      position: absolute
+      top: 80px
+      font-size: 32px
+      color: white
+      @include text-shadow
+    .pre
+      left: 5px
+    .next
+      right: 5px
+
+  .color 
+    .wrapper
+      text-align: center
+    .color-option
+      margin-right: 5px
+      width: 30px
+      height: 30px
+
+  .wheel
+    font-size: 14px
+    table
+      width: 100%
+      text-align: center
+      td
+        width: 50%
+        vertical-align: top
+    .wheel-option
+      width: 48px
+      margin: 5px
+      cursor: pointer
+      // float: right
+
+  .options
+    .move
+      // float: left
+      margin: 0px auto
+      width: 120px
+      height: 120px
+      background-color: #aaa
+      // background-image: url(../images/move.png)
+      background-size: 100% 100%
+      text-align: center
+      font-size: 32px
+      line-height: 33px
+      @include border-radius(50%)
+      @include box-shadow(inset 0px 0px 12px 0px #555)
+      table
+        width: 100%
+        height: 100%
+      tr
+        height: 35px
+        overflow: hidden
+      td
+        width: 33.3%
+        padding: 0px
+      a
+        display: block
+        color: black
+        width: 100%
+        height: 100%
+    .zoom
+      color: #555
+      font-size: 24px
+      text-align: center
+      margin-bottom: 10px
+      cursor: pointer
+      .zoom-in
+        margin-right: 10px
+
+.gap
+  position: absolute
+  top: (760*315/851)+px
+  left: 0px
+  width: 760px
+  height: 12px
+  background-color: #666
+  background-image: url(../images/black-plastic.png)
+  @include box-shadow(0 0 6px 0px black inset)
+
+
+.canvas
+  // position: absolute
+  // top: 0px
+  // left: 228px
+  // // float: left
+  // width: 532px
+  width: 100%
+  height: 210px
+  // background-color: #aaa
+  background-image: url(../images/steel.jpg)
+  background-position: center buttom
+  background-size: 100% auto
+  // background-image: url(/images/bg_1.jpg) center no-repeat
+  // background-size: 100% auto
+
+  .loading
+    margin-top: 240px
+    font-size: 120px
+    color: grey
+    text-align: center
+
+  #preview
+    height: (760*315/851)+px
+    width: 760px
+    position: relative
+    // margin-top: 80px
+    background-image: url(../images/bg/0.jpg)
+    background-size: 100% 100%
+    overflow: hidden
+    .car
+      height: 193px
+      width: 371px
+      position: absolute
+      background-image: url(../images/car/4.png)
+      background-size: auto 100%
+      background-position: 0px 0px
+      overflow: hidden
+      .inner
+        position: absolute
+
+  .rotate-panel
+    height: (760*315/851)+px
+    width: 760%
+    position: absolute
+    z-index: 480
+    // height: 64px
+    // // +background-image(linear-gradient(left, #777 0%, #ddd 50%, #777 100%))
+    // // background-image: url(/images/steel.jpg)
+    // // background-position: center buttom
+    // // background-size: 100% auto
+    // padding: 16px
+    // font-size: 48px
+    cursor: url(../images/rotate_cursor.png), move
+    &:active
+      cursor: url(../images/rotate_cursor.png), move
+
+    .cr, .ccr
+      top: 5px
+      position: absolute
+    .cr
+      right: 0px
+      @include transition(right 0.5s)
+    .ccr
+      left: 0px
+      @include transition(left 0.5s)
+    .finger
+      @include transition(opacity 0.5s, font-size 0.5s)
+
+    &:hover
+      .cr
+        right: 30px
+      .ccr
+        left: 30px
+      .finger
+        opacity: 0
+        font-size: 1px
+
+
+    table
+      width: 100%
+      margin: 0px auto
+      td
+        width: 30%
+        position: relative
+
+
+.top-menu
+  float: right
+  font-size: 80%
+  li
+    float: left
+    background-color: black
+    color: white
+    display: block
+    margin: 2px
+    padding: 4px
+    &.active
+      background-color: #eee
+      color: black
+    a
+      text-decoration: none
+      color: white
+
+#step1
+  position: absolute
+  z-index: 150
+  width: 760px
+
+
+#step2
+  position: absolute
+  top: 0px
+  z-index: 99
+  .close
+    text-align: center
+    z-index: 101
+    width: 24px
+    height: 24px
+    padding: 4px
+    background: rgba(black, 0.6)
+    color: white
+    font-size: 24px
+    position: absolute
+    top: 8px
+    right: 8px
+    @include border-radius(5px)
+
+  .view
+    position: relative
+    width: 760px
+    height: 480px
+    background-image: url("../images/bg_1.jpg")
+    background-position: center -340px
+    .internal
+      position: absolute
+      bottom: 0px
+      width: 760px
+      height: 480px
+      background-image: url("../images/inner.png")
+      background-position: center
+      background-size: auto 100%
+    .property
+      // background: rgba(0,0,0,0.6)
+      position: absolute
+      left: 32px
+      top: 32px
+      width: 200px
+      height: 160px
+      color: white
+      // li
+      //   display: none
+      a
+        display: block
+        width: 100%
+        text-decoration: none
+        color: black
+        margin: 4px
+
+  .detail
+    position: absolute
+    padding: 10px
+    z-index: 1000
+    background-color: #444
+    background-image: url(../images/black_leather.jpg)
+    background-position: center top
+    background-size: 100% auto
+    width: 740px
+    height: 80px
+    @include box-shadow(0px -1px 10px 0px #000)
+  .export
+    float: right
+    text-align: right
+    width: 128px
+    .loading
+      padding-top: 8px
+      text-align: center
+      color: white
+      .spin
+        width: 48px
+    .btn-steel
+      display: none
+
+  .banner
+    width: 600px
+    float: left
+
+.upload-custom-image
+  @include box-sizing(border-box)
+  overflow: hidden
+  position: relative
+  // margin: 10px
+  width: 100%
+  // right: 0px
+
+.bottom-right-btns
+  position: absolute
+  bottom: 8px
+  right: 8px
+  padding: 8px
+  // background: rgb(22, 82, 209)
+  // color: white
+  // text-decoration: none
+  // font-size: large
+  // @include border-radius(5px)
+  // @include box-shadow(0px 0px 8px 0px black)
+  .btn
+    margin-left: 8px
+
+
+.btn-steel
+  text-align: center
+  width: 120px
+  display: inline-block
+  padding: 4px
+  background-color: gray
+  background: url(../images/steel_btn.jpg) center
+  color: #505050
+  margin-bottom: 10px
+  overflow: hidden
+  @include border-radius(2px)
+  @include box-shadow(1px 1px 2px 1px white inset, -1px -1px 2px 1px #555 inset)
+
+#image-uploader
+  opacity: 0
+  position: absolute
+  left: 0px
+  right: 0px
+  cursor: pointer
+
+#select-area-popup
+  img.select
+    // width: 600px
+    // max-width: 320px
+    // max-height: 320px
+.pull-left
+  float: left
+
+.pull-right
+  float: right
+
+.clear-float
+  clear: both
+
+.hide
+  display: none
+
+.center
+  text-align: center
+
+
+.btn
+  display: inline-block
+  *display: inline
+  padding: 4px 12px
+  margin-bottom: 0
+  *margin-left: .3em
+  font-size: 14px
+  line-height: 20px
+  color: #333333
+  text-align: center
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75)
+  vertical-align: middle
+  cursor: pointer
+  background-color: #f5f5f5
+  *background-color: #e6e6e6
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6)
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6))
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6)
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6)
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6)
+  background-repeat: repeat-x
+  border: 1px solid #cccccc
+  *border: 0
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+  border-bottom-color: #b3b3b3
+  -webkit-border-radius: 4px
+  -moz-border-radius: 4px
+  border-radius: 4px
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0)
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+  *zoom: 1
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05)
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05)
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05)
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled]
+  color: #333333
+  background-color: #e6e6e6
+  *background-color: #d9d9d9
+
+
+
+.btn-primary
+  color: #ffffff
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+  background-color: #006dcc
+  *background-color: #0044cc
+  background-image: -moz-linear-gradient(top, #0088cc, #0044cc)
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc))
+  background-image: -webkit-linear-gradient(top, #0088cc, #0044cc)
+  background-image: -o-linear-gradient(top, #0088cc, #0044cc)
+  background-image: linear-gradient(to bottom, #0088cc, #0044cc)
+  background-repeat: repeat-x
+  border-color: #0044cc #0044cc #002a80
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0)
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+
+
+.btn-transparent
+  color: #ffffff
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+  background-color: rgba(white, 0)
+  *background-color: rgba(white, 0)
+  background-image: -moz-linear-gradient(top, rgba(240,240,240, 0.7), rgba(180,180,180, 0.7))
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, rgba(240,240,240, 0.7), rgba(180,180,180, 0.7))
+  background-image: -webkit-linear-gradient(top, rgba(240,240,240, 0.7), rgba(180,180,180, 0.7))
+  background-image: -o-linear-gradient(top, rgba(240,240,240, 0.7), rgba(180,180,180, 0.7))
+  background-image: linear-gradient(to bottom, rgba(240,240,240, 0.7), rgba(180,180,180, 0.7))
+  background-repeat: repeat-x
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25)
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(120,120,120, 0.6)', endColorstr='rgba(60,60,60, 0.6)', GradientType=0)
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false)
+
+
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled]
+  color: #ffffff
+  background-color: #0044cc
+  *background-color: #003bb3
+
+
+.hide
+  display: none
+
+.ios-warning
+  color: white
+
+.draw-info
+  h4
+    margin-bottom: 0.5em
+  p
+    margin-top: 0px

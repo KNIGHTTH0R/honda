@@ -1,0 +1,46 @@
+#welcome > .loading {
+  position: absolute;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  width: 760px;
+  height: 640px;
+}
+
+#welcome .loading .percent {
+  font-family: 'Graduate';
+  color: white;
+  position: absolute;
+  left: 336px;
+  z-index: 1502;
+  top: 295px;
+  font-size: 40px;
+}
+
+
+.spinner {
+  position: absolute;
+  z-index: 1501;
+  top: 170px;
+  left: 230px;
+
+  animation: spin 2s infinite;
+  -webkit-animation: spin 2s infinite; /* Safari and Chrome */
+  -moz-animation-name: spin 2s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+}
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}

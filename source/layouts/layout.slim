@@ -1,0 +1,55 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+
+    /! Always force latest IE rendering engine or request Chrome Frame
+    meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
+
+    /! Use title if it's in the page YAML frontmatter
+    title == data.page.title || "The Middleman"
+
+    == stylesheet_link_tag "normalize", "app", "mp", "loading", "imgareaselect-default"
+    link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet"
+    link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,800' rel='stylesheet' type='text/css'
+    / link href='http://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'
+    link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'
+    link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'
+
+  body
+    #welcome
+      #loading.loading
+        .ios-warning (此app無法支援ios系統預設之瀏覽器)
+        img class="spinner" src="./images/spinner.png"
+        .percent 0%
+      .enter
+        #enter
+        .engine-btn-around
+        .engine-btn
+          img src="./images/engine_btn.png"
+      #car-light
+      audio#engine src="./audio/engine.wav"
+      audio#music src="./audio/music.mp3"
+    nav.navbar
+      header.pull-left
+        h1 New Honda Accord
+      ul.top-menu
+        / li.active HOME
+        li
+          a href="https://www.facebook.com/honda.com.tw" target="_blank" Honda Taiwan Facebook
+        / li
+        /   a FORUM
+        li
+          a href="http://www.honda-taiwan.com.tw/eshowroom/accord2013/" target="_blank" New Honda Accord
+        li
+          a#play-cf href="#" CF Show
+        li
+          a#js-draw-info href="#" 活動說明
+      .clear-float
+    .main-container
+      == yield
+    / script src="https://connect.facebook.net/en_US/all.js"
+
+    #cf-video.mfp-hide style="display:block;width:420px;height:300px;margin: 0px auto;"
+      embed allowfullscreen="true" allowscriptaccess="always" flashvars="width=420&amp;height=300&amp;videofile=http%3A%2F%2Fwww.honda-taiwan.com.tw%2Fflv%2Fmv.flv&amp;autoplay=1&amp;errorcss=.html5box-error%7Btext-align%3Acenter%3B+color%3A%23ff0000%3B+font-size%3A14px%3B+font-family%3AArial%2C+sans-serif%3B%7D&amp;id=0" height="300" pluginspage="http://www.adobe.com/go/getflashplayer" quality="high" src="./flash/cf.swf" type="application/x-shockwave-flash" width="420" wmode="transparent"
+    == javascript_include_tag  "all"
